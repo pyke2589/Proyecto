@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    
+        nav{
+            font-family: sans-serif;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            margin: 0 auto;
+        }
+        nav a {
+            position: relative;
+            color: rgb(209, 118, 0);
+            padding: 10px;
+            text-decoration: none;
+            display: inline-block;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgb(209, 118, 0);
+            color: rgb(0, 0, 0);
+            transform: scale(1.1); 
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: orange;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }   
+
+        nav a:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .ruleta{
+        width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            background-image: url("https://wzhub.gg/images/maps/dark-aether-s3r.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .carrusel {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            animation: movimiento 50s infinite;
+        }
+
+        .carrusel img {
+            width: 100%;
+            height: 100%;
+        }
+        @keyframes movimiento {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0); }
+        }
+        header{
+            font-family: Arial black;
+            background-color: orange;
+            color: black;
+            text-align: center;
+        }
+        section {
+            background-color: orange;
+            padding: 20px;
+            margin: 10px 0;
+            text-align: center;
+            font-family: arial black;
+        }
+        
+        .adentro{
+            background-color:black;
+            width: 75%;
+            text-align: center;
+            border: 10px solid #3d023d;
+            padding: 20px;
+            border-radius: 100px;
+            margin: auto;
+            display: flex;
+        }
+        h2 {
+            background-color: black;
+            font-family: 'Arial Black', sans-serif;
+            color: orange;
+        }
+
+        p{
+            font-family: 'Arial Black', sans-serif;
+            color: #f1e8f1;
+        }
+        .margendentro{
+            background-image: linear-gradient(
+                orange,
+                rgb(151, 3, 139),
+                rgb(46, 1, 58)
+            );
+            width: 40%;
+            text-align: center;
+            border: 10px solid #5a0202;
+            padding: 20px;
+            border-radius: 100px;
+            margin: auto;
+        }
+        .calculadora{
+            width: 40%;
+            text-align: center;
+            padding: 20px;
+            border-radius: 100px;
+            margin: auto;
+        }
+        .video{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgqul78WN82-oAd8gW3k_J0MDHw0YfEuUMBQ&s");
+            width: 40%;
+            text-align: center;
+            border: 10px solid #5a0202;
+            padding: 20px;
+            border-radius: 100px;
+            margin: auto;
+        }
+        .informacion{
+            background-color: white;
+            width: 40%;
+            text-align: center;
+            border: 10px solid #5a0202;
+            padding: 20px;
+            border-radius: 100px;
+            margin: auto;
+        }
+        footer{
+            text-align: center;
+            background-color: black;
+            color:orange
+        }
+        .google{
+            background-color: white;
+            width: 40%;
+            text-align: center;
+            border: 10px solid #5a0202;
+            padding: 20px;
+            border-radius: 100px;
+            margin: auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        a{
+            color: orange;
+        }
+        h6{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a></a>
+        <a href="#seccion1"><img width="40"src="https://cdn2.steamgriddb.com/icon_thumb/95c9ef0bc1a9eda48a7ac64c513a150b.png"></a>
+        <a href="#seccion2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrgVhcKo2Y1qFVEG9boQvnwf2mWE0jRbc9lw&s" width="50"></a>
+        <a href="#seccion3"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQLf-Xz8DDELDQqITNX7EVChilu5aBECuF6xl3441H2F36Lud34" width="40"></a>
+        <a href="seccion4"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSSaofjnNTeCnIZNBVbmSyTpPDUguPpSZ3gtJt9czXltFVb5ePu" width="50" height="40"></a>
+        <h6>...............................................................................................................................................................................................................................................................................</h6>
+        <a href="https://www.activision.com/es/home"><img width="80"src="https://media.licdn.com/dms/image/v2/D4E10AQGdJ2FFDxgKzg/videocover-low/videocover-low/0/1711564928125?e=2147483647&v=beta&t=BH8Kvi4RLp6ot-0xsAtnbAMZoElpEk__-zpx4LjLRjA" target="_blank"></a>
+        <a href="https://www.instagram.com/activision/?hl=es"><img width="40" height="45"src="https://initeconline.com/wp-content/uploads/2019/10/insta_oscuro.png" target="_blank"></a>
+        <a href="https://www.youtube.com/callofduty"><img width="40" src="https://yt3.googleusercontent.com/Wz_UJUsKf5PQzlWBhSf0VfshMQbahqDf6byz2uXcSEp9L5nseaCqiYWoagrYjDs3tIOVUqbYRSM=s900-c-k-c0x00ffffff-no-rj" target="_blank"></a>
+    </nav>
+    <h1></h1>
+    <h1></h1>
+
+    <div class="ruleta">
+        <div class="carrusel">    
+            <img src="https://i.blogs.es/954c69/cod6/500_333.jpeg" alt="BO6">
+            <img src="https://i.ytimg.com/vi/ZDC9ca55BrA/maxresdefault.jpg" alt="Multijugador">
+            <img src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/3t/3TKIEAZYHQ3Z1717709887523.jpg" alt="Vault edition">
+            <img src="https://www.codspain.com/wp-content/uploads/2023/12/MW3-Zombies-Dark-Aether-explicado-como-ingresar-a-las-fisuras.jpg" alt="mwzombis">
+            <img src="https://img.gamewith.net/img/acc99b05288bbd8135b2bd6c9927ca15.png" alt="mw">
+        </div>
+    </div>
+    <h1></h1>
+    <h1></h1>
+
+    <header>
+        <h1>Activision </h1>
+    </header>
+    <h1></h1>
+    <h1></h1>
+    <section id="seccion1" >
+        <h2>Black ops 6</h2>
+        <div class="adentro">
+            <div class="margendentro">
+                <p>Black Ops 6 también marca el regreso de Zombis por rondas, el modo favorito de los fans en el que los jugadores derrotarán hordas de no muertos en dos mapas completamente nuevos el día del lanzamiento. Más tarde, los jugadores descubrirán mapas aún más emocionantes y experiencias innovadoras tanto en el modo multijugador como en Zombis.</p>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/ZexnXA4mMEk?si=WRdApqFEA6RkOvvg" frameborder="0"></iframe>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section id="seccion2" >
+        <h2>Informacion</h2>
+        <div class="adentro">
+            <div class="informacion">
+                <iframe height="450" width="350" src="https://tecnogaming.com/black-ops-6-informacion-clave-sobre-campana-multijugador-y-zombis/" frameborder="50"></iframe>
+            </div>
+            <div class="margendentro">
+                <p>Aqui tiene un poco mas de informacion sobre la nueva entrega de activision:call of dutty BO6, no es de la pagina oficial de nuestro querido activision:call of dutty BO6 pero si buscas informacion original aca es el link</p>
+                <a href="https://www.callofduty.com/es/blackops6"> BO6</a>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section id="seccion3" >
+        <h2>Calculadora Black ops</h2>
+        <div class="adentro">
+            <div class="calculadora">
+                
+                <iframe src="https://paginawebsubidadef2024.on.drv.tw/PaginasWeb/CalculadoraDiego.html" width="350" height="800" ></iframe>
+            </div>
+            <div class="margendentro">
+                <p>Aqui tienes una calculadora echo por un fan (No oficial de activision)pero esta bonito pruebalo</p>
+                <a href="https://drive.google.com/file/d/1A9JI9pMqwB5kfTUN-idkukFkzZsH_zLE/view?usp=sharing"> BO6</a>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section id="seccion4">
+        <h2> Activision priximos estrenos</h2>
+        <div class="adentro">
+            <div class="google">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTTQgwF_Cxji-mVvc0Q7RNWbD0ZBVn8oMp8BOZe8s8NVkF-uLwvpyhfM93KahDyFFMfnGUDsXdaKvPR/pubhtml?gid=0&single=true" frameborder="50" width="350" height="400"></iframe>
+            </div>
+            <div class="margendentro">
+                <p>Proximos juego y juegos ya disponibles en su pagina oficial de activision puedes verlo si gustas si tu juego aun esta disponible o no</p>
+                <a href="https://docs.google.com/spreadsheets/d/1MQCDr1JFz6Ry9InkPHnEpwS5aslE2_IlIdM0m9cxywY/edit?usp=sharing"> BO6</a>
+            </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <a href="https://whatsapp.com/channel/0029Va3b3iT5PO0ssPaVkT1H" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk0Tp_NJPegpcDLkbgkMNRgKpuFafYSMDC_g&s" alt="WhatsApp" style="width: 30px">
+            </a>
+            <a href="https://www.activision.com/es/home"><img width="80"src="https://media.licdn.com/dms/image/v2/D4E10AQGdJ2FFDxgKzg/videocover-low/videocover-low/0/1711564928125?e=2147483647&v=beta&t=BH8Kvi4RLp6ot-0xsAtnbAMZoElpEk__-zpx4LjLRjA" target="_blank"></a>
+            <a href="https://www.instagram.com/activision/?hl=es"><img width="40" height="45"src="https://initeconline.com/wp-content/uploads/2019/10/insta_oscuro.png" target="_blank"></a>
+            <a href="https://www.youtube.com/callofduty"><img width="40" src="https://yt3.googleusercontent.com/Wz_UJUsKf5PQzlWBhSf0VfshMQbahqDf6byz2uXcSEp9L5nseaCqiYWoagrYjDs3tIOVUqbYRSM=s900-c-k-c0x00ffffff-no-rj" target="_blank"></a>
+            <a href="https://thetruthdies.com/" target="_blank" ><img width="45" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7h4y38F9UtQvmQkqsMMkGWG6Lwknq8MCX22mWILjsT1Exo3K0" alt="?" ></a>
+            <h4>® Derechos reservados de:Diego Yampasi</h4>
+            <h4>Fecha de publicacion:30/09/2024 </h4>
+    </footer>
+</body>
+</html>
